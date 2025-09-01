@@ -4,6 +4,8 @@ const copies = document.querySelectorAll(".Copy");
 let copyUpdate = document.getElementById("updateCopy");
 let calls = document.getElementsByClassName("call");
 let serviceHistory = document.getElementById("serviceHistory");
+let coins = document.querySelector(".coins")
+let coin = Number(coins.innerText)
 
 let callHistory = [];
 
@@ -42,10 +44,14 @@ for (const copy of copies) {
 // call feature
 for (const call of calls) {
   call.addEventListener("click", () => {
+    if(coin<20) {alert("You don't have enough coins, you need at least 20 coins to make a call") 
+        return}
     const card = call.closest(".card");
     const serviceName = card.querySelector(".service").innerText;
     const numberElement = card.querySelector(".copyNumber").innerText;
     alert(`calling ${serviceName} ${numberElement}...`);
+    coin -= 20;
+    coins.innerText = coin
     callHistory.unshift({
       serviceName,
       numberElement,
@@ -66,3 +72,8 @@ for (const call of calls) {
   });
   
 }
+
+document.querySelector(".clear").addEventListener("click",()=>{
+    serviceHistory.innerHTML = ""
+    callHistory.length  = 0
+})
