@@ -8,30 +8,47 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav class="flex justify-between items-center bg-white px-[60px] h-[100px]">
-      <div class="flex items-center">
-        <img src="./assets/logo.png" class="w-[50px] h-[50px]" />
-        <p class="font-bold ml-2 text-[#006747]">
+    <nav
+      class="flex flex-wrap justify-between items-center bg-white px-4 sm:px-16 py-4 sm:h-[100px]"
+    >
+      <div class="flex items-center mb-2 sm:mb-0">
+        <img
+          src="./assets/logo.png"
+          class="w-10 h-10 sm:w-[50px] sm:h-[50px]"
+        />
+        <p class="font-bold ml-2 text-[#006747] text-sm sm:text-base">
           Emergency <br />
           Service
         </p>
       </div>
-      <div class="flex items-center gap-2">
-        <p class="flex items-center bg-[#ECFFF0] rounded-3xl px-5 py-1">
-          <span class="font-bold">0</span
-          ><img src="./assets/heart.png" class="w-[30px] h-[30px] ml-1" />
-        </p>
-        <p class="flex items-center bg-[#ECFFF0] rounded-3xl px-5 py-1">
-          <span>100</span>
-          <img src="./assets/coin.png" class="w-[30px] h-[30px] ml-1" />
+
+      <div class="flex flex-wrap items-center gap-2">
+        <p
+          class="flex items-center bg-[#ECFFF0] rounded-3xl px-3 py-1 sm:px-5 sm:py-1"
+        >
+          <span class="font-bold" id="heart">0</span>
+          <img
+            src="./assets/heart.png"
+            class="w-6 h-6 sm:w-[30px] sm:h-[30px] ml-1"
+          />
         </p>
         <p
-          class="flex items-center bg-[#00a63e] rounded-3xl px-6 py-2 font-semibold text-white text-[12px]"
+          class="flex items-center bg-[#ECFFF0] rounded-3xl px-3 py-1 sm:px-5 sm:py-1"
         >
-          <span class="mr-1">2</span>copy
+          <span>100</span>
+          <img
+            src="./assets/coin.png"
+            class="w-6 h-6 sm:w-[30px] sm:h-[30px] ml-1"
+          />
+        </p>
+        <p
+          class="flex items-center bg-[#00a63e] rounded-3xl px-4 py-1 sm:px-6 sm:py-2 font-semibold text-white text-[10px] sm:text-[12px]"
+        >
+          <span class="mr-1" id="updateCopy">0</span>copy
         </p>
       </div>
     </nav>
+
     <!DOCTYPE html>
     <html lang="en">
       <head>
@@ -42,7 +59,18 @@
       </head>
       <body class="bg-green-50 font-sans bg-[#f5fff6]">
         <!-- Header -->
-        <header class="bg-green-700 text-white p-5 text-center">
+        <header
+          style="
+            background: #013223;
+            background: linear-gradient(
+              90deg,
+              rgba(1, 50, 35, 1) 0%,
+              rgba(0, 103, 71, 1) 50%,
+              rgba(1, 50, 35, 1) 100%
+            );
+          "
+          class="bg-green-700 text-white p-5 text-center"
+        >
           <div class="flex items-center flex-col justify-center space-x-2">
             <img
               src="./assets/logo-dark.png"
@@ -64,7 +92,7 @@
             class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
           >
             <!-- Card -->
-            <div class="bg-white p-4 rounded-2xl shadow-md flex flex-col">
+            <div class="card bg-white p-4 rounded-2xl shadow-md flex flex-col">
               <div class="flex justify-between items-center">
                 <img
                   src="./assets/emergency.png"
@@ -76,7 +104,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-6 h-6 text-gray-500 hover:text-red-500 cursor-pointer"
+                  class="w-6 h-6 text-gray-500 hover:text-red-500 cursor-pointer heartCollect"
                 >
                   <path
                     stroke-linecap="round"
@@ -96,7 +124,7 @@
 
               <h2 class="font-bold">National Emergency Number</h2>
               <p class="text-sm text-gray-500">National Emergency</p>
-              <p class="text-2xl font-bold mt-2">999</p>
+              <p class="copyNumber text-2xl font-bold mt-2">999</p>
 
               <span
                 class="inline-block w-fit bg-[#F2F2F2] text-gray-500 text-sm px-3 py-1 rounded-3xl"
@@ -106,20 +134,20 @@
 
               <div class="mt-4 flex justify-between gap-2">
                 <button
-                  class="px-3 py-1 text-sm rounded-lg border text-gray-600 w-full"
+                  class="px-3 py-1 text-sm rounded-lg border text-gray-600 w-full Copy"
                 >
                   📋 Copy
                 </button>
                 <button
                   class="px-3 py-1 text-sm rounded-lg bg-green-600 text-white w-full flex items-center justify-center gap-2"
                 >
-                  <img src=".//assets/call.png" class="w-[14px]" alt="" />
+                  <img src="./assets/call.png" class="w-[14px]" alt="" />
                   Call
                 </button>
               </div>
             </div>
 
-            <div class="bg-white p-4 rounded-2xl shadow-md flex flex-col">
+            <div class="card bg-white p-4 rounded-2xl shadow-md flex flex-col">
               <div class="flex justify-between items-center">
                 <img
                   src="./assets/police.png"
@@ -131,7 +159,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-6 h-6 text-gray-500 hover:text-red-500 cursor-pointer"
+                  class="w-6 h-6 text-gray-500 hover:text-red-500 cursor-pointer heartCollect"
                 >
                   <path
                     stroke-linecap="round"
@@ -151,7 +179,7 @@
 
               <h2 class="font-bold">Police Helpline Number</h2>
               <p class="text-sm text-gray-500">Police</p>
-              <p class="text-2xl font-bold mt-2">999</p>
+              <p class=" copyNumber text-2xl font-bold mt-2">999</p>
 
               <span
                 class="inline-block w-fit bg-[#F2F2F2] text-gray-500 text-sm px-3 py-1 rounded-3xl"
@@ -161,7 +189,7 @@
 
               <div class="mt-4 flex justify-between gap-2">
                 <button
-                  class="px-3 py-1 text-sm rounded-lg border text-gray-600 w-full"
+                  class="px-3 py-1 text-sm rounded-lg border text-gray-600 w-full Copy"
                 >
                   📋 Copy
                 </button>
@@ -173,7 +201,7 @@
                 </button>
               </div>
             </div>
-            <div class="bg-white p-4 rounded-2xl shadow-md flex flex-col">
+            <div class="card bg-white p-4 rounded-2xl shadow-md flex flex-col">
               <div class="flex justify-between items-center">
                 <img
                   src="./assets/fire-service.png"
@@ -186,7 +214,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-6 h-6 text-gray-500 hover:text-red-500 cursor-pointer"
+                  class="w-6 h-6 text-gray-500 hover:text-red-500 cursor-pointer heartCollect"
                 >
                   <path
                     stroke-linecap="round"
@@ -206,7 +234,7 @@
 
               <h2 class="font-bold">Fire Service Number</h2>
               <p class="text-sm text-gray-500">Fire Service</p>
-              <p class="text-2xl font-bold mt-2">999</p>
+              <p class="copyNumber text-2xl font-bold mt-2">999</p>
 
               <span
                 class="inline-block w-fit bg-[#F2F2F2] text-gray-500 text-sm px-3 py-1 rounded-3xl"
@@ -216,7 +244,7 @@
 
               <div class="mt-4 flex justify-between gap-2">
                 <button
-                  class="px-3 py-1 text-sm rounded-lg border text-gray-600 w-full"
+                  class="px-3 py-1 text-sm rounded-lg border text-gray-600 w-full Copy"
                 >
                   📋 Copy
                 </button>
@@ -228,7 +256,7 @@
                 </button>
               </div>
             </div>
-            <div class="bg-white p-4 rounded-2xl shadow-md flex flex-col">
+            <div class="card bg-white p-4 rounded-2xl shadow-md flex flex-col">
               <div class="flex justify-between items-center">
                 <img
                   src="./assets/ambulance.png"
@@ -240,7 +268,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-6 h-6 text-gray-500 hover:text-red-500 cursor-pointer"
+                  class="w-6 h-6 text-gray-500 hover:text-red-500 cursor-pointer heartCollect"
                 >
                   <path
                     stroke-linecap="round"
@@ -260,7 +288,7 @@
 
               <h2 class="font-bold">Ambulance Service</h2>
               <p class="text-sm text-gray-500">Ambulance</p>
-              <p class="text-2xl font-bold mt-2">1994-999999</p>
+              <p class="copyNumber text-2xl font-bold mt-2">1994-999999</p>
 
               <span
                 class="inline-block w-fit bg-[#F2F2F2] text-gray-500 text-sm px-3 py-1 rounded-3xl"
@@ -270,7 +298,7 @@
 
               <div class="mt-4 flex justify-between gap-2">
                 <button
-                  class="px-3 py-1 text-sm rounded-lg border text-gray-600 w-full"
+                  class="px-3 py-1 text-sm rounded-lg border text-gray-600 w-full Copy"
                 >
                   📋 Copy
                 </button>
@@ -282,7 +310,7 @@
                 </button>
               </div>
             </div>
-            <div class="bg-white p-4 rounded-2xl shadow-md flex flex-col">
+            <div class="card bg-white p-4 rounded-2xl shadow-md flex flex-col">
               <div class="flex justify-between items-center">
                 <img
                   src="./assets/emergency.png"
@@ -294,7 +322,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-6 h-6 text-gray-500 hover:text-red-500 cursor-pointer"
+                  class="w-6 h-6 text-gray-500 hover:text-red-500 cursor-pointer heartCollect"
                 >
                   <path
                     stroke-linecap="round"
@@ -314,7 +342,7 @@
 
               <h2 class="font-bold">Women & Child Helpline</h2>
               <p class="text-sm text-gray-500">Women & Child Helpline</p>
-              <p class="text-2xl font-bold mt-2">109</p>
+              <p class="copyNumber text-2xl font-bold mt-2">109</p>
 
               <span
                 class="inline-block w-fit bg-[#F2F2F2] text-gray-500 text-sm px-3 py-1 rounded-3xl"
@@ -324,7 +352,7 @@
 
               <div class="mt-4 flex justify-between gap-2">
                 <button
-                  class="px-3 py-1 text-sm rounded-lg border text-gray-600 w-full"
+                  class="px-3 py-1 text-sm rounded-lg border text-gray-600 w-full Copy"
                 >
                   📋 Copy
                 </button>
@@ -336,7 +364,7 @@
                 </button>
               </div>
             </div>
-            <div class="bg-white p-4 rounded-2xl shadow-md flex flex-col">
+            <div class="card bg-white p-4 rounded-2xl shadow-md flex flex-col">
               <div class="flex justify-between items-center">
                 <img
                   src="./assets/emergency.png"
@@ -348,7 +376,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-6 h-6 text-gray-500 hover:text-red-500 cursor-pointer"
+                  class="w-6 h-6 text-gray-500 hover:text-red-500 cursor-pointer heartCollect"
                 >
                   <path
                     stroke-linecap="round"
@@ -368,7 +396,7 @@
 
               <h2 class="font-bold">Anti-Corruption Helpline</h2>
               <p class="text-sm text-gray-500">Anti-Corruption</p>
-              <p class="text-2xl font-bold mt-2">106</p>
+              <p class=" copyNumber text-2xl font-bold mt-2">106</p>
 
               <span
                 class="inline-block w-fit bg-[#F2F2F2] text-gray-500 text-sm px-3 py-1 rounded-3xl"
@@ -378,7 +406,7 @@
 
               <div class="mt-4 flex justify-between gap-2">
                 <button
-                  class="px-3 py-1 text-sm rounded-lg border text-gray-600 w-full"
+                  class="px-3 py-1 text-sm rounded-lg border text-gray-600 w-full Copy"
                 >
                   📋 Copy
                 </button>
@@ -390,20 +418,20 @@
                 </button>
               </div>
             </div>
-            <div class="bg-white p-4 rounded-2xl shadow-md flex flex-col">
+            <div class="card bg-white p-4 rounded-2xl shadow-md flex flex-col">
               <div class="flex justify-between items-center">
                 <img
                   src="./assets/emergency.png"
                   class="w-[64px] bg-[#ffe3e2] rounded-3xl p-4"
                 />
-        
+
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-6 h-6 text-gray-500 hover:text-red-500 cursor-pointer"
+                  class="w-6 h-6 text-gray-500 hover:text-red-500 cursor-pointer heartCollect"
                 >
                   <path
                     stroke-linecap="round"
@@ -423,7 +451,7 @@
 
               <h2 class="font-bold">Electricity Helpline</h2>
               <p class="text-sm text-gray-500">Electricity</p>
-              <p class="text-2xl font-bold mt-2">16216</p>
+              <p class="copyNumber text-2xl font-bold mt-2">16216</p>
 
               <span
                 class="inline-block w-fit bg-[#F2F2F2] text-gray-500 text-sm px-3 py-1 rounded-3xl"
@@ -433,7 +461,7 @@
 
               <div class="mt-4 flex justify-between gap-2">
                 <button
-                  class="px-3 py-1 text-sm rounded-lg border text-gray-600 w-full"
+                  class="px-3 py-1 text-sm rounded-lg border text-gray-600 w-full Copy"
                 >
                   📋 Copy
                 </button>
@@ -445,20 +473,20 @@
                 </button>
               </div>
             </div>
-            <div class="bg-white p-4 rounded-2xl shadow-md flex flex-col">
+            <div class="card bg-white p-4 rounded-2xl shadow-md flex flex-col">
               <div class="flex justify-between items-center">
                 <img
                   src="./assets/brac.png"
                   class="w-[64px] bg-[#ffe3e2] rounded-3xl p-4"
                 />
-                
+
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-6 h-6 text-gray-500 hover:text-red-500 cursor-pointer"
+                  class="w-6 h-6 text-gray-500 hover:text-red-500 cursor-pointer heartCollect"
                 >
                   <path
                     stroke-linecap="round"
@@ -478,7 +506,7 @@
 
               <h2 class="font-bold">Brac Helpline</h2>
               <p class="text-sm text-gray-500">Brac</p>
-              <p class="text-2xl font-bold mt-2">16445</p>
+              <p class="copyNumber text-2xl font-bold mt-2">16445</p>
 
               <span
                 class="inline-block w-fit bg-[#F2F2F2] text-gray-500 text-sm px-3 py-1 rounded-3xl"
@@ -488,7 +516,7 @@
 
               <div class="mt-4 flex justify-between gap-2">
                 <button
-                  class="px-3 py-1 text-sm rounded-lg border text-gray-600 w-full"
+                  class="px-3 py-1 text-sm rounded-lg border text-gray-600 w-full Copy"
                 >
                   📋 Copy
                 </button>
@@ -500,20 +528,20 @@
                 </button>
               </div>
             </div>
-            <div class="bg-white p-4 rounded-2xl shadow-md flex flex-col">
+            <div class="card bg-white p-4 rounded-2xl shadow-md flex flex-col">
               <div class="flex justify-between items-center">
                 <img
                   src="./assets/Bangladesh-Railway.png"
                   class="w-[64px] bg-[#ffe3e2] rounded-3xl p-4"
                 />
-    
+
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-6 h-6 text-gray-500 hover:text-red-500 cursor-pointer"
+                  class="w-6 h-6 text-gray-500 hover:text-red-500 cursor-pointer heartCollect"
                 >
                   <path
                     stroke-linecap="round"
@@ -533,7 +561,7 @@
 
               <h2 class="font-bold">Bangladesh Railway Helpline</h2>
               <p class="text-sm text-gray-500">Travel</p>
-              <p class="text-2xl font-bold mt-2">163</p>
+              <p class="copyNumber text-2xl font-bold mt-2">163</p>
 
               <span
                 class="inline-block w-fit bg-[#F2F2F2] text-gray-500 text-sm px-3 py-1 rounded-3xl"
@@ -543,7 +571,7 @@
 
               <div class="mt-4 flex justify-between gap-2">
                 <button
-                  class="px-3 py-1 text-sm rounded-lg border text-gray-600 w-full"
+                  class="px-3 py-1 text-sm rounded-lg border text-gray-600 w-full Copy"
                 >
                   📋 Copy
                 </button>
@@ -568,19 +596,20 @@
                 Clear
               </button>
             </div>
-            <ul
-              class="mt-4 space-y-2 text-[12px]  overflow-y-auto max-h-80"
-            >
-              <li class="flex justify-between items-center px-2 py-2 rounded bg-[#fafafa]">
+            <ul class="mt-4 space-y-2 text-[12px] overflow-y-auto max-h-80">
+              <li
+                class="flex justify-between items-center px-2 py-2 rounded bg-[#fafafa]"
+              >
                 <div class="flex flex-col">
-                    <span class="font-bold ">Fire Service Number</span>
-                    <span class="text-gray-600 ">999</span>
+                  <span class="font-bold">Fire Service Number</span>
+                  <span class="text-gray-600">999</span>
                 </div>
-                <span>11:36:58 AM</span>            
+                <span>11:36:58 AM</span>
               </li>
             </ul>
           </aside>
         </main>
+        <script src="script.js"></script>
       </body>
     </html>
   </body>
