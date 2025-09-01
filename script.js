@@ -46,12 +46,23 @@ for (const call of calls) {
     const serviceName = card.querySelector(".service").innerText;
     const numberElement = card.querySelector(".copyNumber").innerText;
     alert(`calling ${serviceName} ${numberElement}...`);
-    callHistory.push({
+    callHistory.unshift({
       serviceName,
       numberElement,
     });
     console.log(callHistory);
+   
+
+    const service = `
+    <li class="flex justify-between items-center px-2 py-2 rounded bg-[#fafafa]">
+      <div class="flex flex-col">
+        <span class="font-bold">${callHistory[0].serviceName}</span>
+        <span class="text-gray-600">${callHistory[0].numberElement}</span>
+      </div>
+      <span>${new Date().toLocaleTimeString()}</span>
+    </li>`;
+    serviceHistory.innerHTML += service;
+  
   });
+  
 }
-
-
