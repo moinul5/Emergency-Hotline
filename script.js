@@ -1,10 +1,11 @@
 let heart = document.getElementById("heart");
-
 const heartCollect = document.querySelectorAll(".heartCollect");
-
 const copies = document.querySelectorAll(".Copy");
-
 let copyUpdate = document.getElementById("updateCopy");
+let calls = document.getElementsByClassName("call");
+let serviceHistory = document.getElementById("serviceHistory");
+
+let callHistory = [];
 
 let heartValue = 0;
 let copyValue = 0;
@@ -37,3 +38,20 @@ for (const copy of copies) {
       });
   });
 }
+
+// call feature
+for (const call of calls) {
+  call.addEventListener("click", () => {
+    const card = call.closest(".card");
+    const serviceName = card.querySelector(".service").innerText;
+    const numberElement = card.querySelector(".copyNumber").innerText;
+    alert(`calling ${serviceName} ${numberElement}...`);
+    callHistory.push({
+      serviceName,
+      numberElement,
+    });
+    console.log(callHistory);
+  });
+}
+
+
